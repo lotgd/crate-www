@@ -1,0 +1,20 @@
+Library:
+    type: object
+    config:
+        description: ""
+        fields:
+            name:
+                type: "String!"
+                description: "Name of this library."
+            version:
+                type: "String!"
+                description: "Version number, conforming to semantic versioning."
+            library:
+                type: "String!"
+                description: "Technical name of this library, in vendor/package format."
+            url:
+                type: "String"
+                description: "Location of this library's code."
+            author:
+                type: "String"
+                description: "Name, or names, of the authors of this library."
