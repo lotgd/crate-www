@@ -1,18 +1,11 @@
-# Notice about creation of types:
-#   for array return valies in the Resolver, use object.
-#   If the type is interface, it needs a resolveType argument to resolve the real type.
-#       resolveType: "@=resolver('realm_type', [value])"
 Realm:
     type: object
     config:
         description: "Common information about the Realm."
         fields:
             name:
-                type: "String"
+                type: "String!"
                 description: "The name of this realm."
-            crateVersion:
-                type: "String"
-                description: "The version of LotGD\\Crate\\WWW."
-            coreVersion:
-                type: "String"
-                description: "The version of LotGD\\Core."
+            configuration:
+                type: "Configuration!"
+                description: "Information about the software and module installed on this realm."

@@ -6,18 +6,31 @@ use Tests\AppBundle\Functional\WebTestCase;
 
 class RealmQueryTest extends WebTestCase
 {
-    public function testRealmTypeReturnsGeneralInformations()
+    public function testRealmTypeReturnsGeneralInformation()
     {
         $query = <<<EOF
 query RealmQuery {
     Realm {
         name,
-        crateVersion,
-        coreVersion
+        configuration {
+            core {
+                name,
+                version,
+                library,
+                url,
+                author
+            }
+            crate {
+                name,
+                version,
+                library,
+                url,
+                author
+            }
+        }
     }
 }
 EOF;
-        
-        $this->assertArrayKeysInQuery($query, "Realm", ["coreVersion", "crateVersion", "name"]);
+        $this->assertArrayKeysInQuery($query, "Realm", ["name", "configuration"]);
     }
 }

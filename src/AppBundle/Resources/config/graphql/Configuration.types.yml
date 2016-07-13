@@ -1,0 +1,14 @@
+Configuration:
+    type: object
+    config:
+        description: "Information about a realm's configuration."
+        fields:
+            crate:
+                type: "Library!"
+                description: "Configuration of the crate, or wrapper, around the core."
+            core:
+                type: "Library!"
+                description: "Configuration of the LotGD core."
+            modules:
+                type: "[Library]"
+                description: "Configuration of installed modules."
