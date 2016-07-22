@@ -26,12 +26,22 @@ class GraphController extends OverblogGraphController
      */
     public function endpointAction(Request $request)
     {
-        if ($request->query->has("query")) {
+        if ($request->isMethod("GET")) {
+            $check = "query";
+        }
+        else {
+            $check = "request";
+        }
+        
+        if ($request->$check->has("query")) {
             // Work-around for empty incorrect graphql variables
-            if ($request->query->has("variables") && $request->query->get("variables") === "") {
-                $request->query->set("variables", "{}");
+            if ($request->$check->has("variables") && $request->$check->get("variables") === "") {
+                $request->$check->set("variables", "{}");
             }
             
+            return parent::endpointAction($request);
+        }
+        elseif (strlen($request->getContent()) > 0) {
             return parent::endpointAction($request);
         }
         else {

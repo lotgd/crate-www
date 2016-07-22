@@ -2,6 +2,7 @@ composer.lock
 /nbproject/
 /vendor/
 /web/bundles/
+/logs/lotgd*
 
 /build/
 /var/*

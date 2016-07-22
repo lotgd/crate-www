@@ -2,6 +2,10 @@ lotgd_create_php:
     resource: "@AppBundle/Controller/GraphController.php"
     type: annotation
     prefix: /
+lotgd_create_php_graphiql:
+    resource: "@AppBundle/Controller/GraphiQLController.php"
+    type: annotation
+    prefix: /graphiql
 #overblog_graphql_endpoint:
 #    path: /
 #    defaults:
@@ -11,6 +15,5 @@ lotgd_create_php:
 #    resource: "@LotGD
 #overblog_graphql_endpoint:
 #    resource: "@OverblogGraphQLBundle/Resources/config/routing/graphql.yml"
-
-overblog_graphql_graphiql:
-    resource: "@OverblogGraphQLBundle/Resources/config/routing/graphiql.yml"
+#overblog_graphql_graphiql:
+#    resource: "@OverblogGraphQLBundle/Resources/config/routing/graphiql.yml"
