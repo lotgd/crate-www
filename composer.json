@@ -2,11 +2,11 @@
     "name": "lotgd/crate-www",
     "description": "Adapts the lotgd/core engine and provides a public API for playing the game",
     "license": "AGPL-3.0",
-    "type": "project",
+    "type": "lotgd-crate",
     
     "autoload": {
         "psr-4": {
-            "LotGD\\Crate\\WWW\\": "src/",
+            "LotGD\\Crate\\GraphQL\\": "src/",
             "AppBundle\\": "src/AppBundle/"
         },
         "classmap": [
@@ -74,6 +74,8 @@
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
-        }
+        },
+        
+        "lotgd-namespace": "LotGD\\Crate\\GraphQL\\"
     }
 }

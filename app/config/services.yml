@@ -5,7 +5,7 @@ parameters:
 
 services:
     lotgd.core.game:
-        class: LotGD\Crate\WWW\AppBundle\Services\CoreGameService
+        class: LotGD\Crate\GraphQL\AppBundle\Services\CoreGameService
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

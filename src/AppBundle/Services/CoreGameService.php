@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LotGD\Crate\WWW\AppBundle\Services;
+namespace LotGD\Crate\GraphQL\AppBundle\Services;
 
 use Doctrine\ORM\EntityManagerInterface;
 

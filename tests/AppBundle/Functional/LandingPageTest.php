@@ -9,7 +9,7 @@ class LandingPageTest extends WebTestCase
     public function testLandingPageHasNoException()
     {
         $client = static::makeClient();
-        $path = $this->getUrl('lotgd_crate_www_app_graph_endpoint');
+        $path = $this->getUrl('lotgd_crate_graphql_app_graph_endpoint');
 
         $client->request(
             'GET', $path

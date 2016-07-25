@@ -1,6 +1,6 @@
 <?php
 
-namespace LotGD\Crate\WWW\AppBundle\GraphQL\Resolver;
+namespace LotGD\Crate\GraphQL\AppBundle\GraphQL\Resolver;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;

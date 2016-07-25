@@ -1,6 +1,6 @@
 services:
     app.graph.resolver.realm:
-        class: LotGD\Crate\WWW\AppBundle\GraphQL\Resolver\RealmResolver
+        class: LotGD\Crate\GraphQL\AppBundle\GraphQL\Resolver\RealmResolver
         tags:
             - { name: overblog_graphql.resolver, alias: "realm_realm", method: "resolveRealm" }
             - { name: overblog_graphql.resolver, alias: "realm_type", method: "resolve" }

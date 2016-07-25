@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LotGD\Crate\WWW\AppBundle\Controller;
+namespace LotGD\Crate\GraphQL\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
