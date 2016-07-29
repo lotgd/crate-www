@@ -1,5 +1,5 @@
 {
-    "name": "lotgd/crate-www",
+    "name": "lotgd/crate-graphql",
     "description": "Adapts the lotgd/core engine and provides a public API for playing the game",
     "license": "AGPL-3.0",
     "type": "lotgd-crate",
@@ -74,8 +74,6 @@
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
-        },
-        
-        "lotgd-namespace": "LotGD\\Crate\\GraphQL\\"
+        }
     }
 }

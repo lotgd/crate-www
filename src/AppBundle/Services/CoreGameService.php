@@ -17,26 +17,12 @@ class CoreGameService
     
     public function __construct()
     {
-        $workingDirectory = getcwd();
-        if (substr($workingDirectory, -3) == "web") {
-            $web = true;
+        if (substr(getcwd(), -4) === "/web") { 
+            $this->game = Bootstrap::createGame(getcwd() . "/..");
         }
         else {
-            $web = false;
+            $this->game = Bootstrap::createGame(getcwd());
         }
-        
-        // For now
-        $handle = fopen(__DIR__ . "/../../../.env", "r");
-        while (($line = fgets($handle))) {
-            // Quick hack..
-            if ($web && substr($line, 0, 13) == "LOTGD_CONFIG=") {
-                $line = "LOTGD_CONFIG=../" . substr($line, 13);
-            }
-
-            putenv(trim($line));
-        }
-        
-        $this->game = Bootstrap::createGame();
     }
     
     public function getVersion()
