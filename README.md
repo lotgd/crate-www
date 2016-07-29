@@ -9,7 +9,7 @@ This is a basic wrapper around the Legend of the Green Dragon [core](https://git
 While this is not a working schema as graphql describes it, it is a human-readable version of it.
 
 ### Types
-```json
+```
 Realm {
   url               string           URL of the realm
   name              string!          Name of the realm
