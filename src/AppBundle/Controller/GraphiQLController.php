@@ -25,7 +25,7 @@ class GraphiQLController extends Controller {
         return $this->render(
             $this->getParameter('overblog_graphql.graphiql_template'),
             [
-                'endpoint' => $this->generateUrl('lotgd_crate_www_app_graph_endpoint'),
+                'endpoint' => $this->generateUrl('lotgd_crate_graphql_app_graph_endpoint'),
                 'versions' => [
                     'graphiql' => $this->getParameter('overblog_graphql.versions.graphiql'),
                     'react' => $this->getParameter('overblog_graphql.versions.react'),
